@@ -7,9 +7,9 @@ const Movies = ({poster_path, vote_average, title}) => {
   return (
     <div className='movie'>
       <img src={API_IMG+poster_path} alt=''/>
-      <div className='title d-flex justify-content-between'>
+      <div className='title d-flex justify-content-between align-items-center'>
       <h5>{title}</h5>
-      <p>{vote_average}</p>
+      <span>{vote_average}</span>
       </div>
     </div>
   )

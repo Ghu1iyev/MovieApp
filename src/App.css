@@ -31,6 +31,7 @@
     /* grid-template-columns: auto auto auto;
     grid-template-rows:  auto; */
     padding-bottom: 20px;
+    position: relative;
 }
 
 .movie{
@@ -44,7 +45,20 @@
 
 .title{
     padding: 0 10px;
-    padding-top: 10px;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.4px);
+-webkit-backdrop-filter: blur(2.4px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    left: 0;
+    border-radius: 0px 0px 18px 18px;
+    height: 80px;
 }
 
 .movie img{
@@ -61,19 +75,20 @@
     background: #d8d3d3;
 }
 
-@media only screen and (max-width: 350px){
-    .nav{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .container{
-        display: flex;
-        justify-content: space-between;
-        
-    }
+@media only screen and (max-width: 400px){
     .movie{
-        width: 120px;
+        width: 150px;
+    }
+    .movies{
+        justify-content: center !important;
+        gap: 15px;
+        margin-bottom: 0 !important;
+    }
+    .title h5{
+        font-size: 13px !important;
+        margin-bottom: 0;
+    }
+    .title{
+        height: 55px;
     }
 }
